@@ -4,8 +4,6 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import { UserProvider } from './context/UseContext'
-import Counter from './Counter'
-import Test from './Test.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

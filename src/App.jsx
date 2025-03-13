@@ -1,9 +1,9 @@
 import Home from './pages/Home/Home'
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import Login from './pages/Login/Login'
 import Player from './pages/Player/Player';
 import { onAuthStateChanged } from 'firebase/auth';
-import { use, useEffect } from 'react';
+import { useEffect } from 'react';
 import { auth } from './firebase';
 import { ToastContainer, toast } from 'react-toastify';
 import NetflixProfileSelection from './pages/Profile/Profile'
@@ -14,7 +14,6 @@ const App = () => {
 
   const navigate = useNavigate();
   const { setUser } = useUser()
-  const location = useLocation();
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
       if(user){
