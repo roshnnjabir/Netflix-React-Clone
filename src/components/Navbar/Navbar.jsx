@@ -43,18 +43,6 @@ const Navbar = () => {
                         }} >Tv Shows 
                         <label ref={refObj} className={`tooltip ${showToolTip ? 'show-tool-tip' : 'hide-tool-tip'}`}>Tv Shows Bookings</label>
                     </li>
-                    <li onMouseEnter={(evnt) => {
-                            const width1 = evnt.target.getBoundingClientRect().width;
-                            const width2 = refObj.current.getBoundingClientRect().width;
-
-                            refObj.current.style.left = `${(width2 + width1 * 1.8)}px`
-                            setShowToolTip(true)
-                        }} 
-                        onMouseLeave={(evnt) =>{
-                            setShowToolTip(false)
-                        }} >Movies 
-                        <label ref={refObj} className={`tooltip ${showToolTip ? 'show-tool-tip' : 'hide-tool-tip'}`}>Watch Movies</label>
-                    </li>
                     <li>Movies</li>
                     <li>New & Popular</li>
                     <li>My List</li>
